@@ -7,6 +7,13 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+
+
+# Ignore logs folder and all files with a .log extension
+logs/
+*.log
+
+
 # Ignore virtual environments
 venv/
 
@@ -15,7 +22,3 @@ venv/
 
 # Ignore artifacts folder
 artifacts/
-
-# Ignore logs folder and all files with a .log extension
-logs/
-*.log
