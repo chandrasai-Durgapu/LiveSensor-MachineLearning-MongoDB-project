@@ -97,6 +97,8 @@ git@github.com:chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
 git remote set-url origin git@github.com:chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
 
 GIT_CURL_VERBOSE=1 git push origin main
+
+git remote set-url origin https://github.com/chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
 -------------------------
 
 
