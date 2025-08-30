@@ -85,6 +85,18 @@ python -m site
 python main.py
 
 flowcharts folder
+
+git add .
+git commit -m "files added"
+git push origin main
+git config --global http.postBuffer 524288000
+git lfs track "*.zip"
+
+git@github.com:chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
+
+git remote set-url origin git@github.com:chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
+
+GIT_CURL_VERBOSE=1 git push origin main
 -------------------------
 
 
