@@ -60,6 +60,31 @@ conda activate F:\DataScienceProjects\SENSORLIVE\venv
  EDA
  Exploratory Data Analysis ....file added partially....few steps of EDA was updated(full steps were pending)
 
+
+run these commands in terminal:-
+pip install -r requirements.txt
+
+mongodb certificate issue
+pip install --upgrade cryptography pymongo pyopenssl
+
+pip install --upgrade pymongo cryptography pyopenssl
+
+pip install --upgrade pymongo cryptography
+
+
+
+pip install PyYAML
+pip install dill
+
+
+pip show python-dotenv pymongo certifi
+
+where python
+python -m site
+
+python main.py
+
+flowcharts folder
 -------------------------
 
 

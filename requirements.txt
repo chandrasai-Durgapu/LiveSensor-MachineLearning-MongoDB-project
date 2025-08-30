@@ -1,3 +1,16 @@
-pymongo==4.2.0
+pymongo[srv]==4.14.1
+pandas
+numpy
+scikit-learn
+pymongo
+python-dotenv
+PyYAML
+dill
 
+certifi #mongo db certificate
+scipy
+
+imbalanced-learn==0.14.0
+
+xgboost==3.0.4 #model trainer purpose
 -e.  #editable mode
