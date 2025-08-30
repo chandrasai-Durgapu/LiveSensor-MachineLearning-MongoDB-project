@@ -2,11 +2,20 @@
 __pycache__/
 *.pyc
 
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
 # Ignore virtual environments
 venv/
 
 .env/*
 
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
+
+# Ignore artifacts folder
+artifacts/
+
+# Ignore logs folder and all files with a .log extension
+logs/
+*.log
