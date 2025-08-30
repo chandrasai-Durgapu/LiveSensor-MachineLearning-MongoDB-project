@@ -101,8 +101,9 @@ git remote set-url origin git@github.com:chandrasai-Durgapu/LiveSensor-MachineLe
 git remote set-url origin https://github.com/chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
 
 
-ssh-keygen -t rsa -b 4096 -C "chandrasekharcse522@gmail.com"
+git remote -v
 
+git remote add origin https://github.com/chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
 -------------------------
 
 
