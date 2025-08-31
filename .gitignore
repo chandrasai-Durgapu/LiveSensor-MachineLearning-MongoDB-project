@@ -21,5 +21,3 @@ venv/
 # Ignore artifacts folder
 artifacts/
 
-#Ignore environments
-.env/*
