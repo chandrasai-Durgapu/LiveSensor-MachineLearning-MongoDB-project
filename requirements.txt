@@ -13,4 +13,11 @@ scipy
 imbalanced-learn==0.14.0
 
 xgboost==3.0.4 #model trainer purpose
+
+
+
+fastapi>=0.95.0
+starlette>=0.27.0
+uvicorn[standard]>=0.22.0
+
 -e.  #editable mode

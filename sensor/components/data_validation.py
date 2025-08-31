@@ -36,6 +36,7 @@ class DataValidation:
             logging.info(f"Data frame has columns: {len(dataframe.columns)}")
 
             if len(dataframe.columns)==number_of_columns:
+                logging.info(f"Data frame columns: {len(dataframe.columns)==number_of_columns}")
                 return True
             return False
         except Exception as e:
@@ -44,17 +45,18 @@ class DataValidation:
     def is_numerical_column_exist(self,dataframe:pd.DataFrame)->bool:
         try:
             numerical_columns = self._schema_config["numerical_columns"]
+            logging.info(f"numerical columns exist: [{numerical_columns}]")
             dataframe_columns = dataframe.columns
 
             numerical_column_present = True
+            logging.info(f"numerical columns present in data_validation.py:{numerical_column_present}")
             missing_numerical_columns = []
 
             for num_column in numerical_columns:
                 if num_column not in dataframe_columns:
                     numerical_column_present=False
                     missing_numerical_columns.append(num_column)
-            
-            logging.info(f"Missing numerical columns: [{missing_numerical_columns}]")
+            logging.info(f"appended Missing numerical columns when numerical-columns not in DataFrame: [{missing_numerical_columns}]")
 
             return numerical_column_present
         
@@ -123,10 +125,12 @@ class DataValidation:
             #Validate numerical columns
 
             status = self.is_numerical_column_exist(dataframe=train_dataframe)
+            logging.info(f"numerical columns status and dataframe=train_dataframe within data_validation.py:{status}")
             if not status:
                 error_message=f"{error_message}Train dataframe does not contain all numerical columns.\n"
-            
+                
             status = self.is_numerical_column_exist(dataframe=test_dataframe)
+            logging.info(f"numerical columns status and dataframe=test_dataframe within data_validation.py:{status}")
             if not status:
                 error_message=f"{error_message}Test dataframe does not contain all numerical columns.\n"
             

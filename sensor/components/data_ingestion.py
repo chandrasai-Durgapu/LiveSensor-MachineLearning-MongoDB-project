@@ -9,9 +9,10 @@ from sensor.entity.artifact_entity import DataIngestionArtifact
 from sensor.data_access.sensor_data import SensorData
 from sklearn.model_selection import train_test_split
 
-from sensor.utils.main_utils import read_yaml_file
-from sensor.constant.training_pipeline import SCHEMA_FILE_PATH
+from sensor.utils.main_utils import read_yaml_file  
 
+from sensor.constant.training_pipeline import SCHEMA_FILE_PATH
+import time
 
 class DataIngestion:
     def __init__(self,data_ingestion_config:DataIngestionConfig):
@@ -30,11 +31,16 @@ class DataIngestion:
         """
         try:
             logging.info("Exporting data from mongodb to feature store")
-
+            # Step 1: Connect to MongoDB
+            
+            # your MongoDB connection code
+            logging.info(f"Exporting data from mongodb to feature store took time {time.perf_counter() - step_start:.2f} seconds")
+            overall_start = time.perf_counter()
             sensor_data = SensorData()
 
             dataframe = sensor_data.export_collection_as_dataframe(collection_name=self.data_ingestion_config.collection_name)
-            
+            step_start = time.perf_counter()
+            logging.info(f"Total time Export Collection as DataFrame {time.perf_counter() - step_start:.2f} seconds")
             feature_store_file_path = self.data_ingestion_config.feature_store_file_path            
 
             #creating folder
@@ -87,7 +93,7 @@ class DataIngestion:
             dataframe = self.export_data_into_feature_store()
             
             dataframe=dataframe.drop(self._schema_config["drop_columns"],axis=1)
-
+            
 
             self.split_data_as_train_test(dataframe=dataframe)
 

@@ -17,9 +17,9 @@ logs/
 # Ignore virtual environments
 venv/
 
-#Ignore environments
-.env/*
-
 
 # Ignore artifacts folder
 artifacts/
+
+#Ignore environments
+.env/*

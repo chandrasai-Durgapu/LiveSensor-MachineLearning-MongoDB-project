@@ -104,6 +104,10 @@ git remote set-url origin https://github.com/chandrasai-Durgapu/LiveSensor-Machi
 git remote -v
 
 git remote add origin https://github.com/chandrasai-Durgapu/LiveSensor-MachineLearning-MongoDB-project.git
+
+
+
+http://127.0.0.1:8080/docs
 -------------------------
 
 

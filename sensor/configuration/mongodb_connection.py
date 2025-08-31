@@ -5,7 +5,8 @@ import certifi
 ca = certifi.where()
 from sensor.constant.env_variable import MONGODB_URL_KEY
 import os 
-import logging 
+from sensor.logger import logging
+
 
 load_dotenv()
 class MongoDBClient:
@@ -21,6 +22,7 @@ class MongoDBClient:
                     MongoDBClient.client = pymongo.MongoClient(mongo_db_url)
                 else:
                     MongoDBClient.client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca)   #TLS/SSl 
+                    
                 
             self.client = MongoDBClient.client
             self.database = self.client[database_name]
